@@ -1,0 +1,70 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black:    #000000;
+  --surface:  #0d0d0d;
+  --card:     #111111;
+  --card-2:   #181818;
+  --border:   rgba(255,255,255,0.07);
+  --border-b: rgba(255,255,255,0.13);
+
+  --white:    #ffffff;
+  --gray-1:   #ededed;
+  --gray-2:   #a1a1a1;
+  --gray-3:   #525252;
+
+  --accent:   #a78bfa;
+  --accent-2: #60a5fa;
+  --accent-bg: rgba(167,139,250,0.08);
+  --accent-border: rgba(167,139,250,0.25);
+
+  --grad-text: linear-gradient(135deg, #ffffff 0%, #c4b5fd 60%, #93c5fd 100%);
+  --grad-accent: linear-gradient(135deg, #a78bfa, #60a5fa);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+* { cursor: none; }
+
+#root { width: 100%; }
+
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.grad-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+::selection { background: rgba(167,139,250,0.3); color: #fff; }
+
+strong { color: var(--white); font-weight: 600; }
